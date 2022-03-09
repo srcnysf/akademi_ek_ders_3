@@ -1,4 +1,6 @@
-import 'package:akademi_ek_ders_3/home.dart';
+import 'package:akademi_ek_ders_3/constants/constants.dart';
+import 'package:akademi_ek_ders_3/ui/home/home.dart';
+import 'package:akademi_ek_ders_3/ui/splash/splash_view.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -11,15 +13,15 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Food App',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+          backgroundColor: Constants.backroundColor,
+          primarySwatch: Colors.green,
         ),
-        home: HomeView());
+        home: SplashView());
   }
 }
