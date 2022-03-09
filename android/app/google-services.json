@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "983113384930",
+    "project_id": "akademi-flutter-demo",
+    "storage_bucket": "akademi-flutter-demo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:983113384930:android:2622f27c9c49bf9ffd6fbb",
+        "android_client_info": {
+          "package_name": "com.example.akademi_ek_ders_3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "983113384930-tqt9k9494llg8v10tlr0u15o8mgbh22t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAi4E0BCKa5frPm_9Z_EmDRv2rCtefA2cE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "983113384930-tqt9k9494llg8v10tlr0u15o8mgbh22t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
