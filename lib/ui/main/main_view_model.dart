@@ -1,3 +1,4 @@
+import 'package:akademi_ek_ders_3/di/locator.dart';
 import 'package:akademi_ek_ders_3/repository/repository.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
@@ -5,7 +6,7 @@ import 'package:stacked/stacked.dart';
 import '../../services/firestore_service.dart';
 
 class MainViewModel extends BaseViewModel {
-  Repository repository = Repository();
+  final Repository repository = locator<Repository>();
   FirestoreService firestoreService = FirestoreService();
 
   int _currentTabIndex = 0;

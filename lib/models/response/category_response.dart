@@ -15,6 +15,7 @@ class MealCategory {
     this.strCategoryDescription,
   });
 
-  factory MealCategory.fromJson(Map<String, dynamic> json) => _$MealCategoryFromJson(json);
+  factory MealCategory.fromJson(Map<String, dynamic> json) =>
+      _$MealCategoryFromJson(json);
   Map<String, dynamic> toJson() => _$MealCategoryToJson(this);
 }

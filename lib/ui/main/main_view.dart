@@ -1,5 +1,6 @@
 import 'package:akademi_ek_ders_3/constants/constants.dart';
 import 'package:akademi_ek_ders_3/ui/home/home.dart';
+import 'package:akademi_ek_ders_3/ui/search/search_view.dart';
 import 'package:akademi_ek_ders_3/widgets/tab_item.dart';
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
@@ -49,7 +50,7 @@ class _MainViewState extends State<MainView> {
                 index: model.currentTabIndex,
                 children: [
                   HomeView(),
-                  HomeView(),
+                  SearchView(),
                   HomeView(),
                   HomeView(),
                 ],

@@ -1,5 +1,8 @@
 import 'package:akademi_ek_ders_3/constants/constants.dart';
+import 'package:akademi_ek_ders_3/ui/area/area_view.dart';
+import 'package:akademi_ek_ders_3/ui/category_detail/category_view.dart';
 import 'package:akademi_ek_ders_3/ui/home/home_view_model.dart';
+import 'package:akademi_ek_ders_3/widgets/area_item.dart';
 import 'package:akademi_ek_ders_3/widgets/category_item.dart';
 import 'package:akademi_ek_ders_3/widgets/section_header.dart';
 import 'package:animations/animations.dart';
@@ -63,8 +66,7 @@ class _HomeViewState extends State<HomeView> {
                                 transitionType: ContainerTransitionType.fade,
                                 transitionDuration: const Duration(milliseconds: 400),
                                 openBuilder: (context, action) {
-                                  // return CategoryDetailView(name: model.categoryList!.categories![index].strCategory);
-                                  return Container();
+                                  return CategoryDetailView(name: model.categoryList!.categories![index].strCategory!);
                                 },
                                 closedBuilder: (context, action) {
                                   return CategoryItem(
@@ -78,6 +80,47 @@ class _HomeViewState extends State<HomeView> {
                                       name: model.categoryList!.categories![index].strCategory,
                                       url: model.categoryList!.categories![index].strCategoryThumb,
                                       description: model.categoryList!.categories![index].strCategoryDescription);
+                                },
+                              );
+                            },
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Try Local Foods",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 30,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          height: 110,
+                          child: ListView.builder(
+                            scrollDirection: Axis.horizontal,
+                            itemCount: model.areaList.meals!.length,
+                            padding: EdgeInsets.all(4),
+                            itemBuilder: (context, index) {
+                              return OpenContainer(
+                                closedElevation: 0,
+                                openElevation: 0,
+                                closedColor: Colors.transparent,
+                                openColor: Colors.transparent,
+                                transitionType: ContainerTransitionType.fade,
+                                transitionDuration: const Duration(milliseconds: 400),
+                                openBuilder: (context, action) {
+                                  return AreaView(area: model.areaList.meals![index].strArea);
+                                },
+                                closedBuilder: (context, action) {
+                                  return AreaListItem(
+                                    name: model.areaList.meals![index].strArea,
+                                  );
                                 },
                               );
                             },

@@ -6,13 +6,11 @@ part of 'categories_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Categories _$CategoriesFromJson(Map<String, dynamic> json) {
-  return Categories(
-    categories: (json['categories'] as List<dynamic>?)
-        ?.map((e) => MealCategory.fromJson(e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+Categories _$CategoriesFromJson(Map<String, dynamic> json) => Categories(
+      categories: (json['categories'] as List<dynamic>?)
+          ?.map((e) => MealCategory.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
 
 Map<String, dynamic> _$CategoriesToJson(Categories instance) =>
     <String, dynamic>{

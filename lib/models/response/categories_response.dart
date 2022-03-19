@@ -1,8 +1,6 @@
 import 'package:akademi_ek_ders_3/models/response/category_response.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import '/models/response/category_response.dart';
-
 part 'categories_response.g.dart';
 
 @JsonSerializable()
