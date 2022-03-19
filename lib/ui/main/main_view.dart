@@ -52,7 +52,7 @@ class _MainViewState extends State<MainView> {
                 children: [
                   HomeView(),
                   SearchView(),
-                  HomeView(),
+                  SearchView(),
                   HomeView(),
                 ],
               ),
