@@ -1,3 +1,4 @@
+import 'package:akademi_ek_ders_3/config.dart';
 import 'package:akademi_ek_ders_3/models/response/area_list_response.dart';
 import 'package:akademi_ek_ders_3/models/response/categories_response.dart';
 import 'package:akademi_ek_ders_3/models/response/category_response.dart';
@@ -14,7 +15,7 @@ class HomeViewModel extends MainViewModel {
   late AreaListReponse areaList;
 
   init() async {
-    await getAreaList("American");
+    AppFlavor.isProd() ? await getAreaList("American") : await getAreaList("Greek");
 
     categoryList = await repository.getCategories().catchError((error) {
       setError(error);

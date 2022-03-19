@@ -22,6 +22,7 @@ class _MainViewState extends State<MainView> {
   Widget build(BuildContext context) {
     return ViewModelBuilder<MainViewModel>.reactive(
       viewModelBuilder: () => MainViewModel(),
+      onModelReady: (model) => model.initMain(),
       disposeViewModel: false,
       builder: (context, model, child) => WillPopScope(
           onWillPop: () async {

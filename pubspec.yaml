@@ -29,6 +29,7 @@ dependencies:
   animations: ^2.0.2
   freezed: ^1.1.1
   freezed_annotation: ^1.1.0
+  firebase_messaging: ^11.2.11
 
 
 dev_dependencies:

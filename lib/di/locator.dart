@@ -7,6 +7,7 @@ import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
 import '../repository/repository.dart';
+import '../services/push_notification_service.dart';
 
 GetIt locator = GetIt.instance;
 
@@ -15,6 +16,7 @@ Future<void> setupLocator() async {
   locator.registerLazySingleton<Dio>(() => NetworkUtil().getDio());
   locator.registerLazySingleton(() => ApiService(locator.get()));
   locator.registerLazySingleton(() => Repository(locator.get(), locator.get()));
+  locator.registerLazySingleton(() => PushNotificationService());
 
   ///ERROR
   locator.registerLazySingleton(() => ErrorFactory);
